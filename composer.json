@@ -3,6 +3,11 @@
     "require": {
         "behat/behat": "~3.0"
     },
+    "autoload": {
+        "psr-4": {
+            "": "app/"
+        }
+    }
     "authors": [
         {
             "name": "Antonio Pierro",
