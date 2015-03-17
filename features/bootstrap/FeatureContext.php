@@ -20,4 +20,36 @@ class FeatureContext implements Context, SnippetAcceptingContext
     public function __construct()
     {
     }
+
+    /**
+     * @Given an empty basket
+     */
+    public function anEmptyBasket()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the basket prize is :arg1
+     */
+    public function theBasketPrizeIs($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given a product which costs :arg1 is added to the basket
+     */
+    public function aProductWhichCostsIsAddedToTheBasket($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the basket price is :arg1
+     */
+    public function theBasketPriceIs($arg1)
+    {
+        throw new PendingException();
+    }
 }
