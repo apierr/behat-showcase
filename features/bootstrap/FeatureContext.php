@@ -1,4 +1,5 @@
 <?php
+# features/bootstrap/FeatureContext.php
 
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
@@ -26,30 +27,27 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     public function anEmptyBasket()
     {
-        throw new PendingException();
+        $this->basket = new Basket();
     }
 
     /**
      * @Then the basket prize is :arg1
      */
-    public function theBasketPrizeIs($arg1)
-    {
-        throw new PendingException();
-    }
-
-    /**
-     * @Given a product which costs :arg1 is added to the basket
-     */
-    public function aProductWhichCostsIsAddedToTheBasket($arg1)
-    {
-        throw new PendingException();
-    }
-
-    /**
-     * @Then the basket price is :arg1
-     */
     public function theBasketPriceIs($arg1)
     {
-        throw new PendingException();
+        if ($this->basket->prize != $arg1) {
+            throw new Exception("The prize is wrong");
+            
+        }
+    }
+
+    /**
+     * @Given a product which costs :prize is added to the basket
+     */
+    public function aProductWhichCostsIsAddedToTheBasket($prize)
+    {
+        $product = new Product($prize);
+
+        $this->basket->add($product);
     }
 }
