@@ -7,7 +7,7 @@ before_script:
     - sh -e /etc/init.d/xvfb start
     - export DISPLAY=:99.0
     - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.31.0.jar
-    - "java -jar selenium-server-standalone-2.31.0.jar &"
+    - "java -jar selenium-server-standalone-2.31.0.jar -port 7055 &"
     - sleep 5
 script:
     - vendor/bin/behat
