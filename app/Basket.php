@@ -5,7 +5,7 @@
  */
 class Basket {
 
-    private $product;
+    private $products = [];
 
     public function add(Product $product)
     {
@@ -17,7 +17,7 @@ class Basket {
         $price = 0;
 
         foreach ($this->products as $product) {
-            $price = $product->getPrice();
+            $price += $product->getPrice();
         }
 
         return $price;
