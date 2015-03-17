@@ -22,34 +22,4 @@ class FeatureContext implements Context, SnippetAcceptingContext
     public function __construct()
     {
     }
-
-    /**
-     * @Then the basket price is :arg1
-     */
-    public function theBasketPriceIs($arg1)
-    {
-        if ($this->basket->price() != $arg1) {
-            throw new Exception("The prize is wrong");  
-        }
-    }
-
-    /**
-     * @Given an empty basket
-     */
-    public function anEmptyBasket()
-    {
-        $this->basket = new Basket();
-    }
-
-    /**
-     * @Given a product which costs :prize is added to the basket
-     */
-     
-    public function aProductWhichCostsIsAddedToTheBasket($prize)
-    {
-        $product = new Product($prize);
-
-        $this->basket->add($product);
-    }
-
 }

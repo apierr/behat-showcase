@@ -1,7 +1,10 @@
 {
     "name": "antonio/behat",
     "require": {
-        "behat/behat": "~3.0"
+        "behat/behat": "~3.0",
+        "behat/mink": "1.6.*",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*"
     },
     "autoload": {
         "psr-4": {
