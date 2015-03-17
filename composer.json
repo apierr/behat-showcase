@@ -1,0 +1,12 @@
+{
+    "name": "antonio/behat",
+    "require": {
+        "behat/behat": "~3.0"
+    },
+    "authors": [
+        {
+            "name": "Antonio Pierro",
+            "email": "antonio.pierro@gmail.com"
+        }
+    ]
+}
